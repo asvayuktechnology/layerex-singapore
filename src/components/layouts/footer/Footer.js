@@ -21,7 +21,7 @@ import {
   FaXTwitter,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { MdMail } from "react-icons/md";
+import { MdMail } from "react-icons/md"; 
 import AppImages from "../../../config/constant/app.images";
 import Image from "next/image";
 
@@ -31,7 +31,7 @@ const socialLinks = [
     icon: <FaFacebookF />,
   },
   {
-    href: "https://www.linkedin.com/company/layerextechnologies",
+    href: "https://www.linkedin.com/company/layerex-technologies",
     icon: <FaLinkedin />,
   },
   {
