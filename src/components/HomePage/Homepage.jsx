@@ -63,6 +63,61 @@ import { MdNavigateNext } from "react-icons/md";
 import Experience from "@/components/Experience/Experience";
 import FullCaseStudy from "@/components/FullCaseStudy/FullCaseStudy";
 import Discuss from "../Discuss/Discuss";
+import c3 from "@/assets/Images/managed.webp";
+import c4 from "@/assets/Images/bthumb4.webp";
+import c5 from "@/assets/Images/data-backup.webp";
+import c6 from "@/assets/Images/bthumb5.webp";
+import seo from "@/assets/Images/it-solution.webp";
+
+
+ const BLOGS = [
+    {
+      id: 1,
+      title: "Top 5 Best IT & Web Development Companies in Singapore (2026)",
+      excerpt:
+        "Singapore’s digital landscape is changing quickly with the Smart Nation 2.0 initiative.",
+      image: seo,
+      link: "/blog/best-it-company-singapore-2026",
+      date: " 02 feb 2026",
+    },
+    {
+      id: 2,
+      title: "Best Managed IT Services in Singapore for Small Businesses | Layerex",
+      excerpt:
+        "Running a business these days means utilizing technology extensively. We must keep our networks safe, use cloud systems, and manage our data.",
+      image: c3,
+      link: "/blog/managed-it-services-singapore-small-business",
+      date: "03 feb 2026",
+    },
+    {
+      id: 3,
+      title: "Best Digital Marketing Company in Singapore | Layerex",
+      excerpt:
+        "Digital marketing team planning SEO, Google Ads, and social media strategy for business growth in the Singapore office",
+      image: c4,
+      link: "/blog/best-digital-marketing-company-singapore",
+      date: "04 feb 2026",
+    },
+    {
+      id: 4,
+      title: "Why Data Backup & Disaster Recovery Is Your Business Lifeline",
+      excerpt:
+        "Imagine this scenario: It is a Monday morning, and your team arrives ready to start the week. Suddenly, the system fails.",
+      image: c5,
+      link: "/blog/data-backup-disaster-recovery-singapore",
+      date: "05 feb 2026",
+    },
+    {
+      id: 5,
+      title: "Website Development Company Singapore | Layerex",
+      excerpt:
+        "web development team designing a responsive business website on a laptop in a modern Singapore office",
+      image: c6,
+      link: "/blog/website-development-company-singapore",
+      date: "06 feb 2026",
+    },
+  ];
+
 
 const Homepage = () => {
   return (
@@ -71,7 +126,7 @@ const Homepage = () => {
       <section className="banner p-0 p-lg-5">
         <div className="container">
           <div className="row align-items-start">
-            <div className="col-lg-7">
+            <div className="col-lg-7 pt-sm-0 pt-5">
               <div className="banner_textInfo pe-0 pe-lg-5 pe-md-5">
                 <h1>Singapore’s Trusted Partner for AI-Driven Solutions</h1>
                 <div className="slider-text-container">
@@ -79,7 +134,7 @@ const Homepage = () => {
                     <li><span>Agentic AI</span></li>
                     <li><span>E-Commerce - B2B , B2C</span></li>
                     <li><span>Fintech Developement</span></li>
-                    <li><span>Custom Software Developement</span></li>
+                    {/* <li><span>Custom Software Developement</span></li> */}
                     <li><span>App Developement</span></li>
                     <li><span>CRM ERP Solutions </span></li>
                   </ul>
@@ -95,7 +150,7 @@ const Homepage = () => {
                 >
                   Layerex Technologies provides end-to-end digital solutions—spanning web and application design, technology consulting, and digital marketing and SEO—to support long-term business success in Singapore.
                 </h2>
-                <div className="row justify-content-center justify-content-xl-start mb-4">
+                <div className="row flex-row justify-content-center justify-content-xl-start mb-4">
                   <div className="col col-auto mi-count-col mb-3 mb-md-0 mb-lg-2">
                     <div className="text-center ">
                       <div className="value text-success fw-bold mi-value d-flex justify-content-center justify-content-md-start  align-items-center fs-5 gap-1">
@@ -130,13 +185,15 @@ const Homepage = () => {
                 <BannerButton btnTitle="Book Your Free Singapore Consultation" />
               </div>
             </div>
-            <div className="col-lg-5">
-              <div className="bannerImg  ">
+            <div className="col-lg-5 d-sm-block d-none">
+              <div className="bannerImg ">
                 <Image
                   src={AppImages.home.bannerImg}
                   alt="design-development-marketing"
                   width={546}
                   height={546}
+                  className="d-sm-block d-none
+                  "
                   style={{ width: "100%", height: "auto" }}
                 />
               </div>
@@ -1071,6 +1128,62 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+
+      <section className="">
+
+        <div className="container py-5">
+          <h2 className="fw-semibold text-center">Industry Insights</h2>
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={3}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
+            modules={[Autoplay]}
+            className="BlogSwiper"
+          >
+            {BLOGS.map((blog) => (
+              <SwiperSlide key={blog.id} className="py-5">
+                <div className="blog-card h-100">
+                  <div className="blog-img">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      width={400}
+                      height={250}
+                      className="img-fluid"
+                    />
+                  </div>
+
+                  <div className="blog-content">
+                    <span className="blog-date">{blog.date}</span>
+                    <h5>{blog.title}</h5>
+                    <p>{blog.excerpt}</p>
+
+                    <Link href={blog.link} className="read-more">
+                      Read More →
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+
       <Discuss
         heading={
           "Partner with a trusted technology expert and discover how our customized solutions can accelerate your growth in Singapore."

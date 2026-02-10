@@ -220,7 +220,7 @@ const WebsiteDesign = () => {
           }}
         />
 
-        <section className="saas-technology">
+        {/* <section className="saas-technology">
           <div className="container">
             <div className="px-5 mx-5">
               <div className="saas-technology-heading text-center">
@@ -289,7 +289,7 @@ const WebsiteDesign = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* <ServicesCaseStudy /> */}
 

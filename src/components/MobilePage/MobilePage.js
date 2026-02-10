@@ -202,7 +202,7 @@ const MobilePage = () => {
           }}
         />
 
-        <section className="saas-technology">
+        {/* <section className="saas-technology">
           <div className="container">
             <div className="px-5 mx-5">
               <div className="saas-technology-heading text-center">
@@ -274,7 +274,7 @@ const MobilePage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <Process
           heading="Our Proven Development Methodology

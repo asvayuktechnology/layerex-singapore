@@ -27,20 +27,20 @@ import Image from "next/image";
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/asvayuktechnologies/",
+    href: "https://www.facebook.com/layerextech5/",
     icon: <FaFacebookF />,
   },
   {
-    href: "https://www.linkedin.com/company/asvayuk-technologies-pvt-ltd/posts/?feedView=all",
+    href: "https://www.linkedin.com/company/layerextechnologies",
     icon: <FaLinkedin />,
   },
   {
-    href: "https://www.instagram.com/asvayuktechnologies/",
+    href: "https://www.instagram.com/layerextech5/",
     icon: <FaInstagram />,
   },
-  { href: "https://x.com/asvayuktech", icon: <FaXTwitter /> },
-  { href: "https://www.youtube.com/@AsvayukTechnologies", icon: <FaYoutube /> },
-  { href: "https://in.pinterest.com/asvayuktech/", icon: <FaPinterestP /> },
+  // { href: "https://x.com/asvayuktech", icon: <FaXTwitter /> },
+  { href: "https://www.youtube.com/@layerextech5", icon: <FaYoutube /> },
+  // { href: "https://in.pinterest.com/asvayuktech/", icon: <FaPinterestP /> },
 ];
 
 const serviceLinks = [
@@ -133,7 +133,7 @@ function Footer() {
                   </div>
                   <div className="information">
                     <MdMail />
-                    <p>info@asvayuktech.com</p>
+                    <p>layerextechnologies@gmail.com</p>
                   </div>
                   <div className="information">
                     <FaPhone />
@@ -144,33 +144,33 @@ function Footer() {
                   <p>Connect with us :</p>
                   <div className="social-icons">
                     <Link
-                      href="https://www.facebook.com/asvayuktechnologies/"
+                      href="https://www.facebook.com/layerextech5/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <FaFacebookF />
                     </Link>
                     <Link
-                      href="https://x.com/asvayuktech"
+                      href="https://www.youtube.com/@layerextech5"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaXTwitter />
+                      <FaYoutube />
                     </Link>
                     <Link
-                      href="https://www.instagram.com/asvayuktechnologies/"
+                      href="https://www.instagram.com/layerextech5/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <FaInstagram />
                     </Link>
-                    <Link
+                    {/* <Link
                       href="https://www.linkedin.com/company/asvayuk-technologies-pvt-ltd/posts/?feedView=all"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <FaLinkedinIn />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

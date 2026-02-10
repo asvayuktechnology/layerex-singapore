@@ -21,37 +21,14 @@ import CardBlog from "@/components/CardBlog/CardBlog";
 import ContactFormComp from "@/components/ContactFormComp/ContactFormComp";
 
 const BlogPage = () => {
+
+
+ 
+
   return (
     <>
       <main>
-        {/* <section className="blog-banner">
-          <Swiper
-            modules={[Pagination]}
-            spaceBetween={0}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            loop={true}
-            className="blogSwiper"
-          >
-            <SwiperSlide>
-              <div className="blogBannerImg">
-                <Image src={seo} className="img-fluid" alt="SEO Banner" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="blogBannerImg">
-                <Image src={c3} className="img-fluid" alt="Shopify Banner" />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="blogBannerImg">
-                <Image src={c4} className="img-fluid" alt="Portal Banner" />
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </section> */}
+    
 
         <section className="blog_banner_content p-5">
           <Container>
@@ -98,8 +75,7 @@ const BlogPage = () => {
                     <CardBlog
                       singleBlogImg={c5}
                       time=" 05 feb 2026"
-                      blogTitle="Why Data Backup & Disaster Recovery Is Your
-Business Lifeline"
+                      blogTitle="Why Data Backup & Disaster Recovery Is Your Business Lifeline"
                       blogPara="Imagine this scenario: It is a Monday morning, and your team arrives ready to start the week. Suddenly, the system fails."
                       CommentNum="0"
                       viwer="285"

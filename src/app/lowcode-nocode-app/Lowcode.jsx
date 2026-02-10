@@ -127,7 +127,7 @@ const Lowcode = () => {
           </div>
         </section>
 
-        <section className="low-code-sec-tool p-5">
+        <section className="low-code-sec-tool p-md-5">
           <div className="container">
             <div className="col-12">
               <div className="row">

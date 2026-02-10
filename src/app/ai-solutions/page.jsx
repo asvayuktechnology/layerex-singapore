@@ -137,7 +137,7 @@ const aiChatbot = () => {
         </p>
       </div>
 
-      <div className="row g-5">
+      <div className="row g-lg-5">
         {/* Left Tabs */}
         <div className="col-lg-4">
           <ul className="list-unstyled ai-tabs">

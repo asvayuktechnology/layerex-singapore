@@ -77,7 +77,7 @@ const CaseStudySlider = () => {
                                             </div>
                                             <div className="caseStuides_para">
                                                 <p className="mb-0 pb-1"><Link href="/case-studies/aryans-group-of-colleges">Website Development</Link></p>
-                                                <h5><Link href="/case-studies/aryans-group-of-colleges">Aryans Group of Colleges</Link></h5>
+                                                <h5><Link href="/case-studies/aryans-group-of-colleges">AGC</Link></h5>
                                             </div>
                                         </div>
                                     </SwiperSlide>

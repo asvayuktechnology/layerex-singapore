@@ -92,7 +92,7 @@ function Contact() {
                     <Tab.Content>
                       <Tab.Pane eventKey="Company">
                         <div className="contact_form_info">
-                          <Form>
+                          <Form className="p-0">
                                                     <div className="row pt-0 pt-lg-4 pt-md-3 pb-0 pb-lg-3 pb-md-3">
                                                         <div className="form-group col-lg-6 pt-4 pt-lg-0 pt-md-0">
                                                             <input type="text" className="form-control" id="inputName"
@@ -158,7 +158,7 @@ function Contact() {
                       </Tab.Pane>
                       <Tab.Pane eventKey="Individual">
                         <div className="contact_form_info">
-                          <Form>
+                          <Form className="p-0">
                                                     <div className="row pt-0 pt-lg-4 pt-md-3 pb-0 pb-lg-3 pb-md-3">
                                                         <div className="form-group col-lg-6 pt-4 pt-lg-0 pt-md-0">
                                                             <input type="text" className="form-control" id="inputName"
@@ -229,7 +229,7 @@ function Contact() {
           </div>
         </section>
 
-        <div className="location_contact col-6 mx-auto pt-5 mb-5">
+        <div className="location_contact col-md-6 mx-auto pt-5 mb-5">
               <Row className="justify-content-center">
                 <div className="col-12 col-lg-4 col-md-6 col-sm-12 cities text-center">
                   <div className="city-img singapore ">

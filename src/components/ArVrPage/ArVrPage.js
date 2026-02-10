@@ -40,7 +40,7 @@ const ArVrPage = () => {
                   power of augmented and virtual reality.
                 </p>
               </div>
-              <div className="Ar-sec-card px-5 ">
+              <div className="Ar-sec-card px-md-5 ">
                 <Row className="gy-2">
                   <div className="col-lg-6 col-12 ">
                     <div className="Ar-sec-card1 d-block d-md-flex">

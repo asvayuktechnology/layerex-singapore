@@ -45,7 +45,7 @@ const KeyPointSection = ({
                         point && (
                           <li key={index} className="d-flex gap-1 py-1 align-items-start">
                             <span>
-                              <Image src={check} />
+                              <Image alt="check icon" src={check} />
                             </span>
 
                             <span>{point}</span>
@@ -86,7 +86,7 @@ const KeyPointSection = ({
                   <Image
                     src={Group105518}
                     alt={altTags?.Group105518 || ""}
-                    className="img-fluid mt-5"
+                    className="img-fluid my-5"
                   />
                 </div>
               </div>

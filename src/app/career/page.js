@@ -64,9 +64,9 @@ const EnterPrisePage = () => {
                     </div>
                     <Accordion className="career-accordion">
                       {/* Job 1 */}
-                      <Accordion.Item eventKey="0" className="career-item">
+                      <Accordion.Item eventKey="0" className="career-item px-0">
                         <Accordion.Header>
-                          <div className="career-header d-flex justify-content-between w-100">
+                          <div className="career-header d-flex flex-sm-row flex-column justify-content-between w-100">
                             IT Sales Executive – Web & Mobile Development
                             <span className="career-meta me-4">
                               Singapore · Full-Time
@@ -140,9 +140,9 @@ const EnterPrisePage = () => {
                         <span>IT Sales Executive – Ecommerce & Shopify Solutions</span>
                         <span>1 Positions</span>
                       </div>
-                      <Accordion.Item eventKey="1" className="career-item">
+                      <Accordion.Item eventKey="1" className="career-item px-0">
                         <Accordion.Header>
-                          <div className="career-header d-flex justify-content-between w-100">
+                          <div className="career-header d-flex flex-sm-row flex-column justify-content-between w-100">
                             IT Sales Executive – Ecommerce & Shopify Solutions
                             <span className="career-meta me-4">
                               Singapore · Full-Time
@@ -207,9 +207,9 @@ const EnterPrisePage = () => {
                         <span>Operations Manager – IT Services</span>
                         <span>1 Positions</span>
                       </div>
-                      <Accordion.Item eventKey="2" className="career-item">
+                      <Accordion.Item eventKey="2" className="career-item px-0">
                         <Accordion.Header>
-                          <div className="career-header d-flex justify-content-between w-100">
+                          <div className="career-header d-flex flex-sm-row flex-column justify-content-between w-100">
                             Operations Manager – IT Services
                             <span className="career-meta me-4">
                               Singapore · Full-Time

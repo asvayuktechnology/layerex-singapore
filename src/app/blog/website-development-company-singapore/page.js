@@ -99,7 +99,7 @@ const blog = () => {
                     </p>
 
                     <p>A great website must:</p>
-                    <ul class="website-requirements">
+                    <ul className="website-requirements">
                       <li>
                         <strong>Load fast:</strong> It should load in under 3
                         seconds and work perfectly on mobile.
@@ -141,7 +141,7 @@ const blog = () => {
                     <h5>
                       <b>Here’s how:</b>
                     </h5>
-                    <ul class="process-list">
+                    <ul className="process-list">
                       <li>
                         🚀 <strong>Strategy First, Design Later:</strong>
                         We take time to understand your business goals before
@@ -265,7 +265,7 @@ const blog = () => {
 
                     <p>Why we stand out:</p>
 
-                    <ul class="why-we-stand-out">
+                    <ul className="why-we-stand-out">
                       <li>✔ Experienced developers</li>
                       <li>✔ Affordable packages</li>
                       <li>✔ Fast delivery</li>
@@ -292,7 +292,7 @@ const blog = () => {
 
                     <p>Your website shows up and:</p>
 
-                    <ul class="website-impact">
+                    <ul className="website-impact">
                       <li>Loads instantly</li>
                       <li>Looks professional</li>
                       <li>Delivers a clear message</li>

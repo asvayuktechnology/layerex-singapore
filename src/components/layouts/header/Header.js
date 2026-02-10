@@ -80,10 +80,17 @@ const SERVICE_TABS = [
 ];
 
 const TECHNOLOGY_ITEMS_COL1 = [
-  { href: "/enterprise-portal-development", label: "Enterprise Portal Development" },
-  { href: "/lowcode-nocode-app", label: "lowCode/noCode-app" },
+  { href: "/website-designing", label: "Website Designing" },
+  { href: "/mobile-app-development", label: "Mobile App Development" },
   { href: "/blockchain-development", label: "Blockchain Development" },
+  { href: "/lowcode-nocode-app", label: "lowCode/noCode-app" },
+  { href: "/ar-vr-development", label: "AR/VR Development" },
   { href: "/saas-development", label: "Saas Development" },
+  { href: "/ui-ux-design", label: "UI UX Design" },
+  // { href: "/enterprise-portal-development", label: "Enterprise Portal Development" },
+
+
+
   { href: "/laravel-development", label: "Laravel Development" },
 ];
 
@@ -92,11 +99,11 @@ const TECHNOLOGY_ITEMS_COL2 = [
   { href: "/woocomerce-development", label: "WooCommerce Development" },
   { href: "/magento-development", label: "Magento Development" },
   { href: "/shopify-development", label: "Shopify Development" },
-  { href: "/ar-vr-development", label: "AR/VR Development" },
+
 ];
 
 const TECHNOLOGY_ITEMS_COL3 = [
-  { href: "/website-designing", label: "Website Designing" },
+
   { href: "/ecomerce-websites", label: "E-commerce Development" },
   { href: "/react-native", label: "React Native Development" },
   { href: "/software-development", label: "Software Development" },
@@ -154,6 +161,19 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const [openMenu, setOpenMenu] = useState({
+    services: false,
+    partnerships: false,
+    resources: false,
+  });
+
+  const toggleMenuSection = (section) => {
+    setOpenMenu((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  };
 
 
   let closeTimeout;
@@ -407,7 +427,7 @@ const Header = () => {
               <NavLink as={Link} href="/">
                 Home
               </NavLink>
-              
+
 
               <NavLink as={Link} href="/ai-solutions">
                 AI Solutions
@@ -424,32 +444,32 @@ const Header = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="menudropdowns services row">
-                  <div class="row align-items-center">
+                  <div className="row align-items-center">
 
 
-                    <div class="col-lg-10">
-                      <div class="row gx-5">
+                    <div className="col-lg-10">
+                      <div className="row gx-5">
 
 
-                        <div class="col-md-6">
-                          <h5 class="service-title">Software Development</h5>
+                        <div className="col-md-6">
+                          <h5 className="service-title">Software Development</h5>
 
                           <div className="service-item-parent">
-                            <div class="service-item">
+                            <div className="service-item">
                               <li>
                                 <Link href={"/website-designing"}>
                                   <Image className="menuicons me-3" src="/Images/laptop.svg" width={100} height={100} />Website Designing
                                 </Link>
                               </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
                               <li>
                                 <Link href={"/mobile-app-development"}>
                                   <Image className="menuicons me-3" src="/Images/mobile.svg" width={100} height={100} />Mobile App Development
                                 </Link>
                               </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               {/* <li>
                                 <Link href={"#"}>
@@ -457,7 +477,7 @@ const Header = () => {
                                 </Link>
                               </li> */}
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li>
                                 <Link href="/blockchain-development">
@@ -465,7 +485,7 @@ const Header = () => {
                                 </Link>
                               </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li>
                                 <Link href={"/lowcode-nocode-app"}>
@@ -473,7 +493,7 @@ const Header = () => {
                                 </Link>
                               </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li>
                                 <Link href={"/ar-vr-development"}>
@@ -481,7 +501,7 @@ const Header = () => {
                                 </Link>
                               </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li>
                                 <Link href={"/saas-development"}>
@@ -489,7 +509,7 @@ const Header = () => {
                                 </Link>
                               </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li>
                                 <Link href={"/ui-ux-design"}>
@@ -497,58 +517,58 @@ const Header = () => {
                                 </Link>
                               </li>
                             </div>
-                            {/* <div class="service-item">
+                            {/* <div className="service-item">
 
                               <li> <Image className="menuicons me-3" src="/Images/ux.svg" width={100} height={100} />UI UX Analysis & Audit</li>
                             </div> */}
                           </div>
                         </div>
 
-                        <div class="col-md-6">
-                          <h5 class="service-title">E-commerce Solutions</h5>
+                        <div className="col-md-6">
+                          <h5 className="service-title">E-commerce Solutions</h5>
 
                           <div className="service-item-parent">
-                            <div class="service-item">
+                            <div className="service-item">
 
-                              <li> <Link href={"/magento-development"}>
-                               <Image className="menuicons me-3" src="/Images/mgento.svg" width={100} height={100} />Magento Development
+                              <li> <Link onClick={toggleMenu} href={"/magento-development"}>
+                                <Image className="menuicons me-3" src="/Images/mgento.svg" width={100} height={100} />Magento Development
                               </Link>
-                               </li>
+                              </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
-                              <li> <Link href={"/shopify-development"}>
-                               <Image className="menuicons me-3" src="/Images/shopy.svg" width={100} height={100} />Shopify Development
+                              <li> <Link onClick={toggleMenu} href={"/shopify-development"}>
+                                <Image className="menuicons me-3" src="/Images/shopy.svg" width={100} height={100} />Shopify Development
                               </Link>
-                               </li>
+                              </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li> <Link href={"/laravel-development"}>
-                               <Image className="menuicons me-3" src="/Images/lara.svg" width={100} height={100} />Laravel Development
+                                <Image className="menuicons me-3" src="/Images/lara.svg" width={100} height={100} />Laravel Development
                               </Link>
-                               </li>
+                              </li>
                             </div>
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li> <Link href={"/woocomerce-development"}>
-                               <Image className="menuicons me-3" src="/Images/woo.svg" width={100} height={100} />WooCommerce Development
+                                <Image className="menuicons me-3" src="/Images/woo.svg" width={100} height={100} />WooCommerce Development
                               </Link>
-                               </li>
+                              </li>
                             </div>
-                            {/* <div class="service-item">
+                            {/* <div className="service-item">
 
                               <li> <Link href={"/ui-ux-design"}>
                                <Image className="menuicons me-3" src="/Images/react.svg" width={100} height={100} />React Native Development
                               </Link>
                                </li>
                             </div> */}
-                            <div class="service-item">
+                            <div className="service-item">
 
                               <li> <Link href={"/search-engine-optimization"}>
-                               <Image className="menuicons me-3" src="/Images/search.svg" width={100} height={100} /> Search Engine Optimisation
+                                <Image className="menuicons me-3" src="/Images/search.svg" width={100} height={100} /> Search Engine Optimisation
                               </Link>
-                               </li>
+                              </li>
                             </div>
                           </div>
                         </div>
@@ -556,7 +576,7 @@ const Header = () => {
                       </div>
                     </div>
 
-                    <div class="col-lg-2 text-center right-logo mt-4 mt-lg-0">
+                    <div className="col-lg-2 text-center right-logo mt-4 mt-lg-0">
                       <Image
                         src={AppImages.brand.logo}
                         alt="Logo"
@@ -572,22 +592,22 @@ const Header = () => {
                 </Dropdown.Menu>
               </Dropdown>
               <Dropdown show={activeDropdown === "Partnerships"}
-  onMouseEnter={() => handleEnter("Partnerships")}
-  onMouseLeave={handleLeave}>
+                onMouseEnter={() => handleEnter("Partnerships")}
+                onMouseLeave={handleLeave}>
                 <Dropdown.Toggle className=" bg-transparent p-0 text-dark border-0 nav-link d-flex align-items-center gap-1" id="dropdown-basic">
                   Partnerships <FaAngleDown />
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="menudropdowns">
                   <Dropdown.Item href="/shopify-development">
-                    <Image className="menuicons me-3" src="/Images/shopify.svg" width={10} height={10} />
+                    <Image alt="" className="menuicons me-3" src="/Images/shopify.svg" width={10} height={10} />
                     Shopify
                   </Dropdown.Item>
-                  <Dropdown.Item href="/google-partnership"> <Image className="menuicons me-3" src="/Images/google.svg" width={100} height={100} /> Google</Dropdown.Item>
-                  <Dropdown.Item href="/razorpay-partnership"> <Image className="menuicons me-3" src="/Images/razorpay.svg" width={100} height={100} /> Razor Pay</Dropdown.Item>
-                  <Dropdown.Item href="grabpay-partnership"> <Image className="menuicons me-3" src="/Images/grabpay.svg" width={100} height={100} />Grab Pay</Dropdown.Item>
+                  <Dropdown.Item href="/google-partnership"> <Image alt="" className="menuicons me-3" src="/Images/google.svg" width={100} height={100} /> Google</Dropdown.Item>
+                  <Dropdown.Item href="/razorpay-partnership"> <Image alt="" className="menuicons me-3" src="/Images/razorpay.svg" width={100} height={100} /> Razor Pay</Dropdown.Item>
+                  <Dropdown.Item href="grabpay-partnership"> <Image alt="" className="menuicons me-3" src="/Images/grabpay.svg" width={100} height={100} />Grab Pay</Dropdown.Item>
                   <Dropdown.Item href="/adobe-partnership">
-                    <Image className="menuicons me-3" src="/Images/adobe.svg" width={100} height={100} />
+                    <Image alt="" className="menuicons me-3" src="/Images/adobe.svg" width={100} height={100} />
                     Adobe
                   </Dropdown.Item>
                   <Dropdown.Item href="/salesforce-partnership">
@@ -598,17 +618,17 @@ const Header = () => {
               </Dropdown>
 
               <Dropdown show={activeDropdown === "Resources"}
-  onMouseEnter={() => handleEnter("Resources")}
-  onMouseLeave={handleLeave}>
+                onMouseEnter={() => handleEnter("Resources")}
+                onMouseLeave={handleLeave}>
                 <Dropdown.Toggle className=" bg-transparent p-0 text-dark border-0 nav-link d-flex align-items-center gap-1" id="dropdown-basic">
                   Resources <FaAngleDown />
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="menudropdowns">
-                  <Dropdown.Item href="/blog"> <Image className="menuicons me-3" src="/Images/blogs.svg" width={100} height={100} />Blogs</Dropdown.Item>
-                  <Dropdown.Item href="/case-studies"> <Image className="menuicons me-3" src="/Images/casestudy.svg" width={100} height={100} />Case Studies</Dropdown.Item>
-                  <Dropdown.Item href="/news"> <Image className="menuicons me-3" src="/Images/newsroom.svg" width={100} height={100} />News Room</Dropdown.Item>
-                  <Dropdown.Item href="/career"> <Image className="menuicons me-3" src="/Images/careers.svg" width={100} height={100} />Careers</Dropdown.Item>
+                  <Dropdown.Item href="/blog"> <Image alt="" className="menuicons me-3" src="/Images/blogs.svg" width={100} height={100} />Blogs</Dropdown.Item>
+                  <Dropdown.Item href="/case-studies"> <Image alt="" className="menuicons me-3" src="/Images/casestudy.svg" width={100} height={100} />Case Studies</Dropdown.Item>
+                  <Dropdown.Item href="/news"> <Image alt="" className="menuicons me-3" src="/Images/newsroom.svg" width={100} height={100} />News Room</Dropdown.Item>
+                  <Dropdown.Item href="/career"> <Image alt="" className="menuicons me-3" src="/Images/careers.svg" width={100} height={100} />Careers</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
               <NavLink as={Link} href="/about-us">
@@ -661,174 +681,208 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about-us" onClick={toggleMenu}>
-                      About Us
+                    <Link href="/ai-solutions" onClick={toggleMenu}>
+                      Ai Solutions
                     </Link>
                   </li>
                   <li className="d-flex justify-content-between align-items-center">
-                    <div>
-                      <span>Our Services</span>
-                    </div>
-                    <div className="angle-downIcon" onClick={toggleVisibility}>
+                    <span>Our Services</span>
+                    <div
+                      className={`angle-downIcon ${openMenu.services ? "rotate" : ""}`}
+                      onClick={() => toggleMenuSection("services")}
+                    >
                       <FaAngleDown />
                     </div>
                   </li>
-                  {isVisible && (
+
+                  {openMenu.services && (
                     <Accordion className="sideMobile-tab">
                       <AccordionItem eventKey="0">
-                        <AccordionHeader>Technology</AccordionHeader>
+                        <AccordionHeader>Software Development</AccordionHeader>
                         <AccordionBody>
-                          <div>
-                            <ul className="list-unstyled d-flex flex-column">
-                              {TECHNOLOGY_ITEMS_COL1.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {TECHNOLOGY_ITEMS_COL2.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {TECHNOLOGY_ITEMS_COL3.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                          <div className="service-item-parent">
+                            <div className="service-item">
+                              <li>
+                                <Link onClick={toggleMenu} href={"/website-designing"}>
+                                  <Image className="menuicons me-3" src="/Images/laptop.svg" width={100} height={100} />Website Designing
+                                </Link>
+                              </li>
+                            </div>
+                            <div className="service-item">
+                              <li>
+                                <Link onClick={toggleMenu} href={"/mobile-app-development"}>
+                                  <Image className="menuicons me-3" src="/Images/mobile.svg" width={100} height={100} />Mobile App Development
+                                </Link>
+                              </li>
+                            </div>
+                            <div className="service-item">
+
+                              {/* <li>
+                                <Link onClick={toggleMenu} href={"#"}>
+                                  <Image className="menuicons me-3" src="/Images/enterprise.svg" width={100} height={100} />Enterprise Portal Development
+                                </Link>
+                              </li> */}
+                            </div>
+                            <div className="service-item">
+
+                              <li>
+                                <Link onClick={toggleMenu} href="/blockchain-development">
+                                  <Image className="menuicons me-3" src="/Images/blockchain.svg" width={100} height={100} />Blockchain Development
+                                </Link>
+                              </li>
+                            </div>
+                            <div className="service-item">
+
+                              <li>
+                                <Link onClick={toggleMenu} href={"/lowcode-nocode-app"}>
+                                  <Image className="menuicons me-3" src="/Images/low.svg" width={100} height={100} />Low Code / No Code
+                                </Link>
+                              </li>
+                            </div>
+                            <div className="service-item">
+
+                              <li>
+                                <Link onClick={toggleMenu} href={"/ar-vr-development"}>
+                                  <Image className="menuicons me-3" src="/Images/ar.svg" width={100} height={100} />AR / VR Development
+                                </Link>
+                              </li>
+                            </div>
+                            <div className="service-item">
+
+                              <li>
+                                <Link onClick={toggleMenu} href={"/saas-development"}>
+                                  <Image className="menuicons me-3" src="/Images/saas.svg" width={100} height={100} />SAAS Development
+                                </Link>
+                              </li>
+                            </div>
+                            <div className="service-item">
+
+                              <li>
+                                <Link onClick={toggleMenu} href={"/ui-ux-design"}>
+                                  <Image className="menuicons me-3" src="/Images/ui.svg" width={100} height={100} />UI/UX Design
+                                </Link>
+                              </li>
+                            </div>
+                            {/* <div className="service-item">
+
+                              <li> <Image className="menuicons me-3" src="/Images/ux.svg" width={100} height={100} />UI UX Analysis & Audit</li>
+                            </div> */}
                           </div>
                         </AccordionBody>
                       </AccordionItem>
+
                       <AccordionItem eventKey="1" className="mt-2">
-                        <AccordionHeader>Marketing</AccordionHeader>
+                        <AccordionHeader>E-commerce Development</AccordionHeader>
                         <AccordionBody>
-                          <div>
-                            <ul className="list-unstyled d-flex flex-column">
-                              <li className="py-2 border-bottom">
-                                <Link href="/digital-marketing-services-in" onClick={toggleMenu}>
-                                  Performance Marketing
-                                </Link>
+                          <div className="service-item-parent">
+                            <div className="service-item">
+
+                              <li> <Link onClick={toggleMenu} href={"/magento-development"}>
+                                <Image className="menuicons me-3" src="/Images/mgento.svg" width={100} height={100} />Magento Development
+                              </Link>
                               </li>
-                              <li className="py-2 border-bottom">
-                                <Link href="/socialMedia-marketing" onClick={toggleMenu}>
-                                  Social Media Marketing
-                                </Link>
+                            </div>
+                            <div className="service-item">
+
+                              <li> <Link onClick={toggleMenu} href={"/shopify-development"}>
+                                <Image className="menuicons me-3" src="/Images/shopy.svg" width={100} height={100} />Shopify Development
+                              </Link>
                               </li>
-                              <li className="py-2 border-bottom">
-                                <Link href="/search-engine-optimization" onClick={toggleMenu}>
-                                  Search Engine Optimization
-                                </Link>
+                            </div>
+                            <div className="service-item">
+
+                              <li> <Link onClick={toggleMenu} href={"/laravel-development"}>
+                                <Image className="menuicons me-3" src="/Images/lara.svg" width={100} height={100} />Laravel Development
+                              </Link>
                               </li>
-                            </ul>
-                          </div>
-                        </AccordionBody>
-                      </AccordionItem>
-                      <AccordionItem eventKey="2" className="mt-2">
-                        <AccordionHeader>Design</AccordionHeader>
-                        <AccordionBody>
-                          <div>
-                            <ul className="list-unstyled d-flex flex-column">
-                              <li className="py-2 border-bottom">
-                                <Link href="/ui-ux-design" onClick={toggleMenu}>
-                                  UI UX Design
-                                </Link>
+                            </div>
+                            <div className="service-item">
+
+                              <li> <Link onClick={toggleMenu} href={"/woocomerce-development"}>
+                                <Image className="menuicons me-3" src="/Images/woo.svg" width={100} height={100} />WooCommerce Development
+                              </Link>
                               </li>
-                            </ul>
-                          </div>
-                        </AccordionBody>
-                      </AccordionItem>
-                      <AccordionItem eventKey="3" className="mt-2">
-                        <AccordionHeader>Products</AccordionHeader>
-                        <AccordionBody>
-                          <div>
-                            <ul className="list-unstyled d-flex flex-column">
-                              {PRODUCTS_ITEMS_COL1.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {PRODUCTS_ITEMS_COL2.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {PRODUCTS_ITEMS_COL3.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </AccordionBody>
-                      </AccordionItem>
-                      <AccordionItem eventKey="4" className="mt-2">
-                        <AccordionHeader>Developers</AccordionHeader>
-                        <AccordionBody>
-                          <div>
-                            <ul className="list-unstyled d-flex flex-column">
-                              {DEVELOPERS_ITEMS_COL1.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {DEVELOPERS_ITEMS_COL2.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {DEVELOPERS_ITEMS_COL3.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {DEVELOPERS_ITEMS_ROW2_COL1.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                              {DEVELOPERS_ITEMS_ROW2_COL2.map((item, index) => (
-                                <li key={index} className="py-2 border-bottom">
-                                  <Link href={item.href} onClick={toggleMenu}>
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                            </div>
+                            {/* <div className="service-item">
+
+                              <li> <Link onClick={toggleMenu} href={"/ui-ux-design"}>
+                               <Image className="menuicons me-3" src="/Images/react.svg" width={100} height={100} />React Native Development
+                              </Link>
+                               </li>
+                            </div> */}
+                            <div className="service-item">
+
+                              <li> <Link onClick={toggleMenu} href={"/search-engine-optimization"}>
+                                <Image className="menuicons me-3" src="/Images/search.svg" width={100} height={100} /> Search Engine Optimisation
+                              </Link>
+                              </li>
+                            </div>
                           </div>
                         </AccordionBody>
                       </AccordionItem>
                     </Accordion>
                   )}
+                  <li className="d-flex justify-content-between align-items-center">
+                    <span>Partnerships</span>
+                    <div
+                      className={`angle-downIcon ${openMenu.partnerships ? "rotate" : ""}`}
+                      onClick={() => toggleMenuSection("partnerships")}
+                    >
+                      <FaAngleDown />
+                    </div>
+                  </li>
+
+                  {openMenu.partnerships && (
+                    <>
+                      <Link onClick={toggleMenu} href="/google-partnership"> <Image className="menuicons me-3" src="/Images/google.svg" width={100} height={100} /> Google</Link>
+                      <Link onClick={toggleMenu} href="/razorpay-partnership"> <Image className="menuicons me-3" src="/Images/razorpay.svg" width={100} height={100} /> Razor Pay</Link>
+                      <Link onClick={toggleMenu} href="grabpay-partnership"> <Image className="menuicons me-3" src="/Images/grabpay.svg" width={100} height={100} />Grab Pay</Link>
+                      <Link onClick={toggleMenu} href="/adobe-partnership">
+                        <Image className="menuicons me-3" src="/Images/adobe.svg" width={100} height={100} />
+                        Adobe
+                      </Link>
+                      <Link onClick={toggleMenu} href="/salesforce-partnership">
+                        <Image className="menuicons me-3" src="/Images/salesforce.svg" width={100} height={100} />
+                        Salesforce</Link>
+                      <Link onClick={toggleMenu} href="/xt-partnership">  <Image className="menuicons me-3" src="/Images/xt.svg" width={100} height={100} />XT.com</Link>
+                    </>
+                  )}
+                  <li className="d-flex justify-content-between align-items-center">
+                    <span>Resources</span>
+                    <div
+                      className={`angle-downIcon ${openMenu.resources ? "rotate" : ""}`}
+                      onClick={() => toggleMenuSection("resources")}
+                    >
+                      <FaAngleDown />
+                    </div>
+                  </li>
+
+                  {openMenu.resources && (
+                    <>
+                      <Link onClick={toggleMenu} href="/blog">
+                        <Image className="menuicons me-3" src="/Images/blogs.svg" width={40} height={40} />
+                        Blogs
+                      </Link>
+                      <Link onClick={toggleMenu} href="/case-studies">
+                        <Image className="menuicons me-3" src="/Images/casestudy.svg" width={40} height={40} />
+                        Case Studies
+                      </Link>
+                      <Link onClick={toggleMenu} href="/news">
+                        <Image className="menuicons me-3" src="/Images/newsroom.svg" width={40} height={40} />
+                        News Room
+                      </Link>
+                      <Link onClick={toggleMenu} href="/career">
+                        <Image className="menuicons me-3" src="/Images/careers.svg" width={40} height={40} />
+                        Careers
+                      </Link>
+                    </>
+                  )}
                   <li>
-                    <Link href="/blog" onClick={toggleMenu}>
-                      Blog
+                    <Link href="/about-us" onClick={toggleMenu}>
+                      About
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/case-studies" onClick={toggleMenu}>
-                      Case Studies
-                    </Link>
-                  </li>
+
                   <li>
                     <Link href="/contact-us" onClick={toggleMenu}>
                       Contact Us

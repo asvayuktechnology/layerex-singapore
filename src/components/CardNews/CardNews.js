@@ -14,7 +14,7 @@ function CardNews({ singleBlogImg, time,comment, blogTitle, blogPara, CommentNum
                         <Image src={singleBlogImg} className="card-img-top" alt="..." loading="lazy" width={736} height={368}/>
                     </Link>
                 </div>
-                <div className="card_body p-4">
+                <div className="card_body p-md-4">
                     <div className="card-body ps-3">
                         <div className="date text-start d-flex gap-3 mb-4">
                             <span className="d-flex align-items-center gap-2">
