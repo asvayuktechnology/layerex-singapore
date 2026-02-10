@@ -14,7 +14,7 @@ import Magento_service_card from "@/components/Magento_service_card/Magento_serv
 import Industry from "@/components/Industry/Industry";
 import ServicesCaseStudy from "@/components/ServicesCaseStudy/ServicesCaseStudy";
 import AdvancedAIModels from "@/components/AdvancedAIModels";
-import Link from "next/link";
+import Link from "next/link"; 
 
 const services = [
   {
