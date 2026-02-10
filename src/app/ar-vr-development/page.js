@@ -1,9 +1,9 @@
 import ArVrPage from "@/components/ArVrPage/ArVrPage";
 
 export const metadata = {
-  title: "Top AR/VR Development Company in Singapore (SG) ∣ Asvayuk",
+  title: "AR / VR Development Singapore | Immersive Tech",
   description:
-"Hire expert AR/VR developers in Singapore for high-impact, immersive solutions. Custom Augmented Reality and Virtual Reality apps for the fast-growing SG market."    
+"Transform user experiences with cutting-edge AR and VR solutions. Book a free consultation today and step into the future!"    
 };
 
 const arvrDev = () => {

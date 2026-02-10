@@ -1,9 +1,9 @@
 import UIUXPage from "@/components/UI-UXPage/UI-UXPage";
 
 export const metadata = {
-  title: "Top UI/UX Design & Development Services in Singapore (SG) ∣ Asvayuk",
+  title: "Best UI/UX Design Services Singapore | LayerEx Tech",
   description:
-    "Hire the Best UI/UX Designers in Singapore for stunning, high-converting digital products. Expert mobile app and website UI/UX design tailored for the SG market.",
+    "Design seamless user interfaces and engaging experiences crafted to strengthen your digital presence. Get a free UI/UX audit and start today!",
 };
 
 const uiUx = () => {

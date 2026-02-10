@@ -5,8 +5,8 @@ import Homepage from "../components/HomePage/Homepage";
 
 
 export const metadata = {
-  title: "Custom Software for Singapore SMEs",
-  description: "Need custom software solutions for your Singapore SME? AsvayukTech builds robust web & mobile apps. Get a free quote on enterprise development services today!",
+  title: "Trusted AI & Software Solutions in Singapore | LayerEx",
+  description: "Singapore's partner for AI-driven solutions & Fintech. Empowering SMEs with digital transformation. Book your free Singapore consultation today!",
 };
 
 

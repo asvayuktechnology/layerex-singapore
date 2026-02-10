@@ -2,9 +2,9 @@ import React from 'react'
 import MagentoDev from './MagentoDev'
 
 export const metadata = {
-  title: "Best Magento Developers for eCommerce in Singapore",
+  title: "Magento Development Singapore | E-commerce Experts",
   description:
-    "Hire the best Magento developers in Singapore for scalable, high-performance eCommerce website development. We specialize in custom themes, migration, and integration."
+    "Scalable and robust Magento stores built to boost your online sales. Get a free quote today and start selling globally!"
 };
 
 const page = () => {

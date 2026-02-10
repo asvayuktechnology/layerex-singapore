@@ -1,11 +1,11 @@
 import React from 'react'
 import GooglePartnership from './GooglePartnership'
 
-// export const metadata = {
-//   title: "Top Shopify Development Services in Singapore",
-//   description:
-//     "Build a high-performance Shopify online store with experts in Singapore. We deliver custom, SEO-optimized, and visually appealing e-commerce websites for your brand."
-// };
+export const metadata = {
+  title: "Google Cloud & Ads Partner Singapore | LayerEx Tech",
+  description:
+    "Leverage Google’s powerful ecosystem with Singapore’s trusted tech experts for cloud and marketing success. Join us now to optimize your growth!"
+};
 
 
 const page = () => {

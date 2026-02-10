@@ -3,9 +3,9 @@ import React from "react";
 import LaravelDev from "./LaravelDev";
 
 export const metadata = {
-  title: "Top Shopify Development Services in Singapore",
+  title: "Expert Laravel Development Singapore | LayerEx Tech",
   description:
-    "Build a high-performance Shopify online store with experts in Singapore. We deliver custom, SEO-optimized, and visually appealing e-commerce websites for your brand."
+    "Custom PHP web applications built with the secure and scalable Laravel framework. Inquire now for high-performance web solutions!"
 };
 
 const laravelDev = () => {

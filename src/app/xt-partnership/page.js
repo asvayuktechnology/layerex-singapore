@@ -2,11 +2,11 @@ import React from 'react'
 import XtPartnership from './XtPartnership'
 // import SalesforcePartnership from './SalesforcePartnership'
 
-// export const metadata = {
-//   title: "Top Shopify Development Services in Singapore",
-//   description:
-//     "Build a high-performance Shopify online store with experts in Singapore. We deliver custom, SEO-optimized, and visually appealing e-commerce websites for your brand."
-// };
+export const metadata = {
+  title: "Blockchain & Exchange Partners Singapore | LayerEx",
+  description:
+    "Specialized tech collaborations for secure blockchain and crypto exchange operations in Singapore. Partner with our experts and join us today!"
+};
 
 
 const page = () => {

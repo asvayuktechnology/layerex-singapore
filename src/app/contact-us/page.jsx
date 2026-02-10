@@ -4,8 +4,8 @@ import React from 'react'
 
 
 export const metadata = {
-  title: "Contact Software Development Team in Singapore",
-  description: "Contact our expert team for custom software development, mobile app consultation, or a free quote for your Singapore business needs.",
+  title: "Contact LayerEx Singapore | Free Tech Consultation",
+  description: "Ready to innovate? Visit us at 20 Cecil Street, Singapore, or call +6590554745. Contact LayerEx today to start your digital transformation journey.",
 };
 
 

@@ -3,9 +3,9 @@ import WebsiteDesign from './WebsiteDesign'
 
 
 export const metadata = {
-  title: "Top Website Designing Company in Singapore",
+  title: "Professional Website Designing Singapore | LayerEx",
   description:
-    "Leading Website Designing and Web Development services in Singapore. We create high-performance, SEO-optimized, and responsive websites tailored for your SG business goals."
+    "Create a stunning online presence with custom web designs that convert. Join us now to elevate your digital brand in Singapore!"
 };
 
 const page = () => {

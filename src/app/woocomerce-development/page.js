@@ -1,7 +1,7 @@
 import WoocommercePage from "@/components/WoocommercePage/WoocommercePage";
 export const metadata = {
-  title: "WooCommerce Development Services in Singapore",
-  description: "We offer expert WooCommerce Development Services in Singapore. Get customized, secure, and SEO-optimized e-commerce stores built by our trusted team. Request a free quote!",
+  title: "WooCommerce Development Singapore | WordPress Sales",
+  description: "Transform your WordPress site into a powerful store with WooCommerce. Contact LayerEx today to grow your e-commerce revenue!",
 };
 
 const woocomerce = () => {

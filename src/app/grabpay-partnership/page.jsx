@@ -2,11 +2,11 @@ import React from 'react'
 // import RazorpayPartnership from './RazorpayPartnership'
 import GrabpayPartnership from './GrabpayPartnership'
 
-// export const metadata = {
-//   title: "Top Shopify Development Services in Singapore",
-//   description:
-//     "Build a high-performance Shopify online store with experts in Singapore. We deliver custom, SEO-optimized, and visually appealing e-commerce websites for your brand."
-// };
+export const metadata = {
+  title: "Secure Payment Integration With Grabpay Singapore | LayerEx Tech",
+  description:
+    "Partnering with Grab Pay to provide seamless, secure transactions for Singapore businesses. Contact us to integrate now!"
+};
 
 
 const page = () => {

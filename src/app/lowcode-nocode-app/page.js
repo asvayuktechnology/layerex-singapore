@@ -2,9 +2,9 @@ import React from 'react'
 import Lowcode from './Lowcode'
 
 export const metadata = {
-  title: "Low-Code & No-Code App Development in Singapore",
+  title: "Low Code / No Code Development Singapore | LayerEx",
   description:
-    "Unlock digital transformation with Low-Code and No-Code development in Singapore. We offer fast, scalable enterprise apps using OutSystems and Mendix."
+    "Launch your software faster with our expert low-code and no-code solutions. Consult our experts now for rapid digital growth!"
 };
 
 

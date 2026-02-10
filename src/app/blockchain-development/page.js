@@ -2,8 +2,8 @@ import BlockChainPage from "@/components/BlockChainPage/BlockChainPage";
 
 
 export const metadata = {
-  title: "Blockchain Development Services Singapore",
-  description: "We are leading Blockchain Developers in Singapore, offering custom DeFi, NFT, and Crypto solutions. Build secure decentralized applications.Get a quote!",
+  title: "Blockchain Development Singapore | Secure Tech",
+  description: "Leading blockchain solutions for secure and transparent business operations. Contact us today to explore decentralized tech!",
 };
 
 
